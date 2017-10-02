@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Vika pika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<script>
+        $(document).ready(function () {
+            $(".arrow").click(function () {
+                $(".hide_menu").slideToggle(300);
+                $(".field").show();
+            });
+            $(".field").click(function () {
+                $(".hide_menu").fadeOut(300);
+                $(".field").hide();
+            });
+        });
+</script>
+<div class="field"></div>
+<header>
+    <div class="logo_bg">
+        <div class="logo_visible">
+            <div class="arrow">
+                <div class="hide_menu">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Team</a>
+                    <a href="">Services</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Team</a>
+            <a href="" class="logo"></a>
+            <a href="">Services</a>
+            <a href="">Blog</a>
+            <a href="">Contact Us</a>
+        </div>
+    </div>
+    <div class="welcome">
+        <div class="container">
+            <div class="row">
+                <h3>We build it with passion</h3>
+                <h4>Just to be clear, we do this for fun not for you, just kidding.</h4>
+                <button>READ MORE</button>
+            </div>
+        </div>
+    </div>
+    <div class="dots-container"></div>
+</header>
+
+<section>
+    <div class="about_us">
+        <div class="time-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="text_right">
+                            <h1>2011</h1>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit bigus mit.</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 hidden">
+                        <div class="dot_sm"></div>
+                    </div>
+                    <div class="col-sm-5 hidden"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 hidden"></div>
+                    <div class="col-sm-2 ">
+                        <div class="dot_sm"></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div>
+                            <h1>2012</h1>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit bigus mit.
+                                Begitus vit urna nulla.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="text_right mrg">
+                            <h1>2013</h1>
+                            <h4>Sed at auctor sem, nec tincidunt elit. Pellentesque enim turpis, porttitor ac orci in,
+                                ultrices
+                                efficitur nisl. Ut odio libero, sodales a tellus eleifend, suscipit dapibus mi.</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 hidden">
+                        <div class="dot_big"></div>
+                    </div>
+                    <div class="col-sm-5 hidden"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 hidden"></div>
+                    <div class="col-sm-2 hidden">
+                        <div class="dot_sm"></div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div>
+                            <h1>2014</h1>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipiselit. Vivamus varius nec diam vitae
+                                hendrerit bigus mit.
+                                Begitus vit urna nulla.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buildings"></div>
+    </div>
+</section>
+
+<section>
+    <div class="our_team">
+        <h1>This is our team</h1>
+        <h4>We are small but effective and ...</h4>
+    </div>
+    <div class="container">
+        <div class="team_photos">
+            <div class="photo">
+                <div class="teammate photo-1"></div>
+                <h3>Mark Once</h3>
+                <h4>Designer & Front-End Developer</h4>
+                <div>
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="instagram"></a>
+                </div>
+            </div>
+            <div class="photo">
+                <div class="teammate photo-2"></div>
+                <h3>Justin Twice</h3>
+                <h4>Founder & CEO</h4>
+                <div>
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="instagram"></a>
+                </div>
+            </div>
+            <div class="photo">
+                <div class="teammate photo-3"></div>
+                <h3>Antonio Never</h3>
+                <h4>Someone & Somewhere</h4>
+                <div>
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tilt"></div>
+</section>
+
+<section>
+    <div class="services">
+        <div class="services_header">
+            <h1>We provide you everything</h1>
+            <h4>Maybe not everything, but we provide you some stuff.</h4>
+        </div>
+        <div class="container services_cards">
+            <div class="cards">
+                <div class="card card-1"></div>
+                <h3>Some Analytics</h3>
+                <h4>Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</h4>
+            </div>
+            <div class="cards">
+                <div class="card card-2"></div>
+                <h3>We provide you love</h3>
+                <h4>Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</h4>
+            </div>
+            <div class="cards">
+                <div class="card card-3"></div>
+                <h3>And Some Cloud</h3>
+                <h4>Aenean nisi lectus, convallis non lorem sit amet, rhoncus malesuada justo</h4>
+            </div>
+        </div>
+        <div class="blog">
+            <button>VISIT OUR BLOG</button>
+        </div>
+        <div class="tilt_white"></div>
+    </div>
+</section>
+
+<section>
+    <div class="contact_us">
+        <h1>Contact Us</h1>
+        <h4>We know what we need to do</h4>
+        <div class="container">
+            <div class="contacts">
+                <div class="contact">
+                    <div class="picture picture-1"></div>
+                    <h4>555-222-333</h4>
+                </div>
+                <div class="contact">
+                    <div class="picture picture-2"></div>
+                    <h4>Here is some adress</h4>
+                </div>
+                <div class="contact">
+                    <div class="picture picture-3"></div>
+                    <h4>somemail@hotmail.com</h4>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <div><input type="text" required placeholder="Full Name"></div>
+            <div><input type="text" required placeholder="E-mail"></div>
+            <div><input type="text" required placeholder="Number"></div>
+            <div>
+                <textarea required placeholder="Write your Message here..."></textarea>
+            </div>
+            <input type="submit" value="Submit" class="submit">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="copyright">
+        <h4>Copyright © Kenan Hamidic. All rights reserved.</h4>
+    </div>
+</footer>
+</body>
+</html>

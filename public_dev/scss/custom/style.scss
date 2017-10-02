@@ -1,0 +1,762 @@
+@font-face {
+  font-family: 'lato_regular';
+  src: url('/fonts/lato-regular-webfont.woff2') format('woff2'),
+  url('/fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato_light';
+  src: url('/fonts/lato-light-webfont.woff2') format('woff2'),
+  url('/fonts/lato-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'merriweather_lightitalic';
+  src: url('/fonts/merriweather-lightitalic-webfont.woff2') format('woff2'),
+  url('/fonts/merriweather-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'montserrat_light';
+  src: url('/fonts/montserrat-light-webfont.woff2') format('woff2'),
+  url('/fonts/montserrat-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat_regular';
+  src: url('/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+  url('/fonts/montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto_regular';
+  src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+  url('/fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  min-height: 400px;
+
+  .field{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+    display: none;
+    position: fixed;
+  }
+  .menu {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    justify-content: center;
+    a {
+      font-family: 'roboto_regular', serif;
+      font-size: 13px;
+      color: #989696;
+      transition-duration: 0.4s;
+      margin: 18px 17px;
+      &:hover {
+        color: black;
+        text-decoration: none;
+      }
+      &:first-of-type {
+        color: #010101;
+      }
+
+    }
+    .logo {
+      height: 54px;
+      width: 55px;
+      background: url('/images/logo.png');
+      margin: 0 25px;
+    }
+  }
+  .hide_menu {
+    display: none;
+    width: 200px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin: 18px auto;
+    position: absolute;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 25px;
+      color: black;
+      margin-top: 4px;
+      padding-left: 8px;
+      z-index: 10;
+      border-radius: 5px;
+      transition-duration: 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+      }
+    }
+  }
+  .logo_bg {
+    display: none;
+
+    .logo_visible {
+      display: none;
+      height: 54px;
+      width: 55px;
+      background-image: url(/images/logo.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 8px solid white;
+      margin: 25px 30%;
+      transition-duration: 0.3s;
+      z-index: 5;
+
+      &:hover {
+        border-top: 8px solid black;
+      }
+    }
+  }
+  .welcome {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 54px - 54px - 70px);
+    align-items: center;
+    text-align: center;
+    h3 {
+      font-size: 44px;
+      font-family: 'lato_light', serif;
+      word-spacing: 5px;
+      margin-bottom: -7px;
+    }
+    h4 {
+      font-size: 16px;
+      font-family: 'merriweather_lightitalic', serif;
+      color: #898888;
+      word-spacing: 1px;
+      opacity: 0.6;
+      margin-bottom: 42px;
+    }
+    button {
+      height: 55px;
+      width: 190px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      font-size: 13px;
+      font-family: 'montserrat_regular', serif;
+      transition-duration: 0.3s;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  .dots-container {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    background-image: url(/images/dots.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about_us {
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/bg_aboutus.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-color: #181818;
+
+  h1 {
+    font-family: 'lato_light', serif;
+    font-size: 48px;
+    margin: 0;
+    color: white;
+  }
+  h4 {
+    font-family: 'montserrat_light', serif;
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+    color: #b7b7b7;
+    word-spacing: 1px;
+    opacity: 0.8;
+  }
+  .text_right {
+    text-align: right;
+  }
+  .dot_sm {
+    background-image: url(/images/dot_small.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    height: 120px;
+    width: 100%;
+  }
+  .mrg {
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+  .dot_big {
+    background-image: url(/images/dot_big.png);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+    height: 200px;
+    width: 100%;
+  }
+  .hidden {
+    display: block;
+  }
+}
+
+.buildings {
+  background-image: url(/images/buildings.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 255px;
+  padding-bottom: 90px;
+}
+
+.time-line {
+  padding-top: 150px;
+  margin-bottom: 110px;
+}
+
+.our_team {
+  padding-top: 90px;
+  text-align: center;
+  margin-bottom: 150px;
+
+  h1 {
+    font-family: 'lato_light', serif;
+    font-size: 34px;
+    color: #1d1e1f;
+    word-spacing: 5px;
+    margin-bottom: -5px;
+  }
+  h4 {
+    font-family: 'merriweather_lightitalic', serif;
+    font-size: 16px;
+    color: #898888;
+    opacity: 0.6;
+    word-spacing: 1px;
+  }
+}
+
+.team_photos {
+  text-align: center;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.photo {
+  display: inline-block;
+  width: 184px;
+  text-align: center;
+  margin: 0 95px;
+  a {
+    margin: 0 5px 15px;
+  }
+  .teammate {
+    height: 170px;
+    width: 170px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 85px;
+    margin: 0 7px 30px;
+  }
+  h3 {
+    font-family: 'lato_light', serif;
+    font-size: 24px;
+    color: #464646;
+    margin: -5px;
+  }
+  h4 {
+    font-family: 'lato_light', serif;
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-bottom: 16px;
+  }
+}
+
+.photo:nth-of-type(2n+1) {
+  margin-top: 100px;
+}
+
+.photo-1 {
+  background-image: url(/images/Mark_Once.png);
+}
+
+.photo-2 {
+  background-image: url(/images/Justin_Twice.png);
+}
+
+.photo-3 {
+  background-image: url(/images/Antonio_Never.png);
+}
+
+.tilt {
+  width: 0;
+  height: 0;
+  border-left: 100vw solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 202px solid #181818;
+}
+
+.twitter {
+  background-image: url(/images/twit.png);
+  display: inline-block;
+  width: 21px;
+  height: 18px;
+  background-position: center;
+}
+
+.instagram {
+  background-image: url(/images/inst.png);
+  display: inline-block;
+  width: 21px;
+  height: 20px;
+  background-position: center;
+}
+
+.services {
+  background-color: #181818;
+
+  .services_header {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 215px;
+    h1 {
+      font-family: 'lato_light', serif;
+      font-size: 34px;
+      color: white;
+      word-spacing: 5px;
+      margin-bottom: -5px;
+    }
+    h4 {
+      font-family: 'merriweather_lightitalic', serif;
+      font-size: 16px;
+      color: #777777;
+      word-spacing: 1px;
+    }
+  }
+  .services_cards {
+    text-align: center;
+  }
+  .cards {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    margin: 0 30px;
+
+    .card {
+      display: block;
+      height: 150px;
+      width: 150px;
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 4px solid white;
+      border-radius: 75px;
+      margin: 0 auto 30px;
+    }
+    h3 {
+      font-family: 'lato_light', serif;
+      font-size: 24px;
+      color: white;
+      word-spacing: 3px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-family: 'lato_light', serif;
+      font-size: 16px;
+      color: #383838;
+      word-spacing: 3px;
+      margin: 0 auto 20px;
+    }
+  }
+  .card-1 {
+    background-image: url(/images/1.png);
+  }
+  .card-2 {
+    background-image: url(/images/2.png);
+  }
+  .card-3 {
+    background-image: url(/images/3.png);
+  }
+  .blog {
+    background-image: url(/images/blog.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 636px;
+    text-align: center;
+    margin-top: 140px;
+    padding-top: 305px;
+
+    button {
+      height: 65px;
+      width: 220px;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      font-family: 'lato_regular', serif;
+      transition-duration: 0.3s;
+      border: none;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  //.tilt_white {
+  //  margin-top: -155px;
+  //  width: 0;
+  //  height: 0;
+  //  border-left: 100vw solid transparent;
+  //  border-right: 0px solid transparent;
+  //  border-bottom: 202px solid white;
+  //}
+}
+
+.contact_us {
+  padding-top: 90px;
+  text-align: center;
+
+  h1 {
+    font-family: 'lato_light', serif;
+    font-size: 34px;
+    color: #1d1e1f;
+    word-spacing: 5px;
+    margin-bottom: -5px;
+  }
+  h4 {
+    font-family: 'merriweather_lightitalic', serif;
+    font-size: 16px;
+    color: #898888;
+    word-spacing: 1px;
+    margin-bottom: 55px;
+  }
+  .contact {
+    display: inline-block;
+    margin: 0 50px;
+    width: 120px;
+    .picture {
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: -5px;
+    }
+    .picture-1 {
+      background-image: url(/images/phone.png);
+    }
+    .picture-2 {
+      background-image: url(/images/pin.png);
+    }
+    .picture-3 {
+      background-image: url(/images/mail.png);
+    }
+    h4 {
+      font-family: 'lato_light', serif;
+      font-size: 12px;
+      color: #898888;
+    }
+  }
+  .form {
+    margin-top: 100px;
+
+    input {
+      font-family: 'lato_light', serif;
+      font-size: 15px;
+      color: #898888;
+      text-align: center;
+      width: 770px;
+      height: 50px;
+      margin-bottom: 20px;
+      border: 1px solid lightgrey;
+    }
+    textarea {
+      font-family: 'lato_light', serif;
+      font-size: 15px;
+      width: 770px;
+      height: 195px;
+      resize: none;
+      color: #898888;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border: 1px solid lightgrey;
+    }
+    .submit {
+      background-color: #181818;
+      font-family: 'lato_regular', serif;
+      font-size: 17px;
+      color: white;
+      border: none;
+      transition-duration: 0.3s;
+      margin-bottom: 140px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+footer {
+  .copyright {
+    text-align: center;
+
+    h4 {
+      font-family: 'lato_light', serif;
+      font-size: 14px;
+      color: #898888;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .team_photos {
+    display: block;
+  }
+  .photo:nth-of-type(2n+1) {
+    margin-top: 0px;
+  }
+  .services {
+    .services_header {
+      text-align: center;
+      padding-top: 50px;
+      margin-bottom: 150px;
+    }
+    .blog {
+      height: 478px;
+      margin-top: 60px;
+      padding-top: 245px;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .our_team {
+    padding-top: 70px;
+    margin-bottom: 100px;
+  }
+  .photo {
+    margin: 0 60px;
+  }
+  .services {
+    .services_header {
+      text-align: center;
+      padding-top: 50px;
+      margin-bottom: 100px;
+    }
+    .cards {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .blog {
+      height: 175px;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  header {
+    .menu {
+      display: none;
+    }
+    .logo_bg {
+      display: block;
+      width: 100%;
+      height: 54px;
+      background-color: lightgrey;
+
+      .logo_visible {
+        display: flex;
+        width: 100%;
+        height: 54px;
+        background: url('/images/logo.png');
+        background-repeat: no-repeat;
+        background-position: 15% 0%;
+      }
+      .arrow {
+        margin: 25px 25%;
+      }
+    }
+  }
+  .time-line {
+    padding-top: 100px;
+    margin-bottom: 70px;
+  }
+  .about_us {
+    .mrg {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+    .dot_big {
+      background-position: 50% 40%;
+    }
+  }
+  .our_team {
+    margin-bottom: 70px;
+  }
+  .photo {
+    margin: 0 60px 35px;
+  }
+  .services {
+    .cards {
+      margin: 0 10px 35px;
+    }
+  }
+  .contact_us {
+    padding-top: 60px;
+
+    .contact {
+      display: inline-block;
+      margin: 0 20px;
+    }
+    .form {
+      margin-top: 50px;
+
+      input {
+        width: calc(100vw - 100px);
+      }
+      textarea {
+        width: calc(100vw - 100px);
+      }
+      .submit {
+        margin-bottom: 90px;
+      }
+    }
+  }
+  footer {
+    .copyright {
+
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 543px) {
+  header {
+    .logo_bg {
+
+      .logo_visible {
+        background-position: 10% 0%;
+      }
+    }
+  }
+  .about_us {
+    background-image: none;
+
+    h1 {
+      margin: 0 50px;
+    }
+    h4 {
+      margin: 0 30px;
+    }
+    .dot_sm {
+      background-image: none;
+    }
+    .mrg {
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
+    .dot_big {
+      background-image: none;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  header {
+    .logo_bg {
+      .logo_visible {
+        background-position: 5% 0%;
+      }
+    }
+    .welcome {
+      height: calc(100vh - 54px - 70px);
+      h3 {
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 30px;
+      }
+      h4 {
+        margin: 0 30px;
+        margin-bottom: 60px;
+      }
+    }
+    .dots-container {
+      display: none;
+    }
+  }
+  .about_us {
+    h1 {
+      font-size: 38px;
+    }
+    h4 {
+      margin-bottom: -65px;
+    }
+  }
+  .services {
+    .services_header {
+      h1 {
+        line-height: 40px;
+      }
+      h4 {
+        margin: 25px 10px;
+      }
+    }
+    .cards {
+      width: 290px;
+      margin: 0 auto 25px;
+    }
+    .blog {
+      background-image: none;
+    }
+  }
+  .contact_us {
+      .form {
+        input {
+          width: calc(100vw - 40px);
+        }
+        textarea {
+          width: calc(100vw - 40px);
+        }
+      }
+  }
+}
+
